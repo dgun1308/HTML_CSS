@@ -1,0 +1,127 @@
+HTML 실습문제 풀이
+
+1번 문제
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 1번</title>
+</head>
+<body>
+<form action="#">
+    <fieldset>
+        <legend>납품자 정보</legend>
+        <ol>
+        <li><label>납품자 명 : </label><input type="text" name="supplier"></li><br>
+        <li><label>email : </label><input type="email" name="email" placeholder="answer@naver.com"></li><br>
+        <li><label>홈페이지 : </label><input type="url" name="homepage" value="http://"></li><br>
+        <li><label>지 역 : </label>
+        <select name="nation">
+            <option value="pu" selected>부산</option>
+            <option value="se">서울</option>
+            <option value="da">대전</option>
+            <option value="etc">기타</option>
+        </select></li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>납품 정보</legend>
+        <ul>
+            <li><label>상품명 : </label><input type="text" name="product"></li><br>
+            <li><label>납품수량 : </label><input type="number" name="amount" min="100" placeholder="최소 100"></li><br>
+            <li><label>납품등급 : </label><input type="range" name="grade" min="0" max="10" value="5"></li><br>
+            <li><label>기타사항 : </label><textarea rows="5"></textarea></li><br>
+        </ul>
+    </fieldset><br>
+    <input type="submit" value="send message">
+</form>
+</body>
+</html>
+
+2번 문제
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 2번</title>
+</head>
+<body>
+    <form action="#">
+        <label>고객명 : </label><input type="text" name="name"><br><br>
+        <label>전화번호 : </label><input type="tel" name="phone"><br><br>
+        <label>E-mail : </label><input type="email" name="email"><br><br>
+        <label>피자선택 : </label>
+        <select name="menu">
+            <option>피자를 선택하세요</option>
+            <option>불고기 피자</option>
+            <option>페퍼로니 피자</option>
+        </select>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <input type="radio" value="S" name="size"><label>Small</label><br><br>
+            <input type="radio" value="M" name="size"><label>Medium</label><br><br>
+            <input type="radio" value="L" name="size"><label>Large</label><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <input type="checkbox" value="베이컨" name="topping"><label>베이컨</label><br><br>
+            <input type="checkbox" value="치즈" name="topping"><label>치즈</label><br><br>
+            <input type="checkbox" value="양파" name="topping"><label>양파</label><br><br>
+            <input type="checkbox" value="버섯" name="topping"><label>버섯</label><br><br>
+        </fieldset><br>
+        <label>희망배송시간 : </label><input type="time" name="delivery time"><br><br>
+        <label>배송시 요청사항 : </label><textarea rows="3"></textarea><br><br>
+        <input type="submit" value="주문하기">
+    </form>
+</body>
+</html>
+
+3번 문제
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 3번</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+            <ul type="none">
+            <li><label><b>ID </b></label><input type="text" name="userId" placeholder="아이디 10글자 이내"> &nbsp;<input type="submit" value="중복확인"><br></li>
+            <li><label><b>비밀번호 </b></label><input type="password" name="userPwd" placeholder="영문,숫자,특수문자 포함 8자 이상" size="30"><br></li>
+            <li><label><b>비밀번호 확인 </b></label><input type="password"name="userPwdC" size="30"><br></li>
+            <li><label><b>Email </b></label><input type="email" name="email">
+            <select>
+                <option>직접입력</option>
+                <option>naver.com</option>
+                <option>google.com</option>
+            </select></li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>추가 정보</legend>
+            <label>프로필 사진 </label><input type="file" name="profile picture"><br><br>
+            <label>성 별 : </label>
+            <input type="radio" value="M" name="gender" checked><label> 남자</label>
+            <input type="radio" value="F" name="gender"><label> 여자</label><br><br>
+            <label>생년월일 : </label><input type="date" name="birth date"><br><br>
+            <label>취미</label><br>
+            <input type="checkbox" value="baseball" name="hobby"><label>야구</label>
+            <input type="checkbox" value="basketball" name="hobby"><label>농구</label>
+            <input type="checkbox" value="football" name="hobby"><label>축구</label><br>
+            <input type="checkbox" value="study" name="hobby" checked><label>공부</label>
+            <input type="checkbox" value="music" name="hobby"><label>음악감상</label><br>
+            <input type="checkbox" value="etc" name="hobby"><label>기타 </label><input type="text"><br>
+            <label>자기소개</label><br>
+            <textarea style="resize:none" cols="70" rows="10"></textarea>
+        </fieldset><br>
+        <input type="submit" value="회원가입"> <input type="reset" value="다시입력"> <input type="submit" value="이전으로">
+    </form>
+</body>
+</html>
